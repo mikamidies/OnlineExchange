@@ -1,13 +1,22 @@
+<script setup>
+const props = defineProps({
+  product: {
+    type: Object,
+    required: true,
+  },
+});
+</script>
+
 <template>
   <div class="item">
     <div class="img">
-      <img src="/public/assets/img/prod.jpg" alt="" />
+      <img :src="product.img" alt="" />
     </div>
     <div class="content">
       <div class="top">
         <div>
-          <p class="name">XBox Series S АБСАЛЮТНА НОВАЯ БЕЛАЯ КАК СНЕГ</p>
-          <p class="price">2 000 000</p>
+          <p class="name">{{ product.name }}</p>
+          <p class="price">{{ product.price }}</p>
         </div>
 
         <button class="like">

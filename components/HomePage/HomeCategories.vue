@@ -1,18 +1,25 @@
+<script setup>
+const categories = [
+  { name: "Cars", img: "/assets/img/cat-1.png", color: "#ffce32" },
+  { name: "Electronics", img: "/assets/img/cat-2.png", color: "#ff5636" },
+  { name: "Fashion", img: "/assets/img/cat-3.png", color: "#36b37e" },
+  { name: "Home & Garden", img: "/assets/img/cat-4.png", color: "#6554c0" },
+  { name: "Sports", img: "/assets/img/cat-5.png", color: "#00c7e6" },
+  { name: "Toys", img: "/assets/img/cat-6.png", color: "#ff8b00" },
+  { name: "Health & Beauty", img: "/assets/img/cat-7.png", color: "#ff5636" },
+  { name: "Animals", img: "/assets/img/cat-8.png", color: "#36b37e" },
+];
+</script>
+
 <template>
   <div class="categories component">
     <h4 class="title">Categories</h4>
     <div class="items">
-      <div class="item">
-        <div class="img">
-          <img src="/public/assets/img/cat-1.png" alt="" />
+      <div v-for="item in categories" :key="item.id" class="item">
+        <div :style="{ backgroundColor: item.color }" class="img">
+          <img :src="item.img" alt="" />
         </div>
-        <p class="name">Cars</p>
-      </div>
-      <div class="item">
-        <div class="img">
-          <img src="/public/assets/img/cat-2.png" alt="" />
-        </div>
-        <p class="name">Electronics</p>
+        <p class="name">{{ item.name }}</p>
       </div>
     </div>
   </div>
@@ -39,7 +46,6 @@
   width: 88px;
   height: 88px;
   border-radius: 50%;
-  background-color: #ffce32;
 }
 .categories .name {
   font-size: 16px;
