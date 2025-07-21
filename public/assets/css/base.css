@@ -64,6 +64,9 @@ select {
   letter-spacing: inherit;
   border: none;
   outline: none;
+  font-family: var(--main-font);
+  font-size: 16px;
+  line-height: 100%;
 }
 
 p,
@@ -82,9 +85,12 @@ h6 {
   max-width: 1286px;
   padding: 0 16px;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 body {
   font-family: var(--main-font);
   color: var(--main-color);
+  overflow-x: hidden;
 }

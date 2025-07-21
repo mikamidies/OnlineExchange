@@ -40,6 +40,8 @@
   background: var(--main-color);
   color: white;
   padding: 16px 0;
+  position: relative;
+  z-index: 2;
 }
 .desktopNavbar .container {
   max-width: 1270px;
