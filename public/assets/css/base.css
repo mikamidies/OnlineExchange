@@ -1,0 +1,90 @@
+:root {
+  --main-color: #02282c;
+  --light-grey: #f2f4f5;
+  --light-green: #cbf7ee;
+
+  --main-font: "Geomanist";
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 100%;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  display: inline-block;
+  text-decoration: none;
+}
+
+svg {
+  display: inline-block;
+  max-width: 100%;
+}
+
+img,
+picture,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+  border-radius: 0;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  font-family: var(--main-font);
+  font-size: 16px;
+  line-height: 100%;
+}
+
+input,
+textarea,
+select {
+  color: inherit;
+  letter-spacing: inherit;
+  border: none;
+  outline: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1286px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: var(--main-font);
+  color: var(--main-color);
+}
