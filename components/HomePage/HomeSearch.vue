@@ -1,3 +1,20 @@
+<template>
+  <div class="component search">
+    <form>
+      <div class="input">
+        <Icon icon="mdi:search" />
+        <input type="text" placeholder="Input your request" />
+      </div>
+      <div class="region">
+        <Icon icon="mdi:map-marker-outline" />
+        <p>Tashkent</p>
+      </div>
+      <button class="submit">Search <Icon icon="mdi:search" /></button>
+    </form>
+  </div>
+</template>
+
+<style scoped>
 .search {
   background: var(--light-grey);
   padding: 32px;
@@ -40,3 +57,4 @@
   background: white;
   padding: 20px 30px;
 }
+</style>

@@ -1,5 +1,6 @@
 :root {
   --main-color: #02282c;
+  --light-green: #406367;
   --light-grey: #f2f4f5;
   --light-green: #cbf7ee;
 
@@ -93,4 +94,12 @@ body {
   font-family: var(--main-font);
   color: var(--main-color);
   overflow-x: hidden;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+  line-height: 34px;
 }

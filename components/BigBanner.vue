@@ -11,7 +11,7 @@
 .image {
   width: 1920px;
   height: 1080px;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 50%;
   transform: translate(-50%, 0%);
