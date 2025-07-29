@@ -222,7 +222,7 @@ function openDropdown(item, rowIndex, event) {
 
 <style scoped>
 .categories {
-  padding: 32px;
+  padding: 32px 32px 56px 32px;
 }
 .categories .items {
   display: grid;
@@ -287,10 +287,9 @@ function openDropdown(item, rowIndex, event) {
   position: relative;
   z-index: 10;
   background: #fff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin: 16px 0;
-  padding: 16px;
+  margin: 16px 0 40px 0;
   transition: 0.4s;
+  border: 1px solid var(--border);
 }
 .dropdown-arrow {
   position: absolute;

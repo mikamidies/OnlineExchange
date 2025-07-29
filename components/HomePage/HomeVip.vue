@@ -64,7 +64,7 @@ const products = [
 
 <style scoped>
 .component {
-  padding: 32px;
+  padding: 32px 32px 56px 32px;
   background: var(--light-grey);
 }
 .items {

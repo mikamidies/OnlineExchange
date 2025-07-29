@@ -36,21 +36,6 @@ function backToRegions() {
   isCityLevel.value = false;
   selectedRegion.value = null;
 }
-
-function handleClickOutside(event) {
-  const dropdown = document.getElementById("region-dropdown");
-  if (dropdown && !dropdown.contains(event.target)) {
-    showDropdown.value = false;
-    isCityLevel.value = false;
-  }
-}
-
-onMounted(() => {
-  document.addEventListener("mousedown", handleClickOutside);
-});
-onBeforeUnmount(() => {
-  document.removeEventListener("mousedown", handleClickOutside);
-});
 </script>
 
 <template>
