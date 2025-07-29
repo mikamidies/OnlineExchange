@@ -16,10 +16,12 @@ const categories = [
     <h4 class="title">Categories</h4>
     <div class="items">
       <div v-for="item in categories" :key="item.id" class="item">
-        <div :style="{ backgroundColor: item.color }" class="img">
-          <img :src="item.img" alt="" />
-        </div>
-        <p class="name">{{ item.name }}</p>
+        <NuxtLink to="/list">
+          <div :style="{ backgroundColor: item.color }" class="img">
+            <img :src="item.img" alt="" />
+          </div>
+          <p class="name">{{ item.name }}</p></NuxtLink
+        >
       </div>
     </div>
   </div>
@@ -35,12 +37,16 @@ const categories = [
   column-gap: 12px;
   row-gap: 40px;
 }
-.categories .item {
+.categories .item a {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 28px;
+}
+.categories .item a:hover .name {
+  background-color: var(--main-color);
+  color: white;
 }
 .categories .img {
   width: 88px;
@@ -51,5 +57,6 @@ const categories = [
   font-size: 16px;
   font-weight: 600;
   line-height: 20px;
+  padding: 0 4px;
 }
 </style>

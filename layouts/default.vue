@@ -5,8 +5,28 @@ import DesktopFooter from "~/components/Layout/DesktopFooter.vue";
 
 <template>
   <div class="layout">
-    <DesktopHeader />
-    <slot />
-    <DesktopFooter />
+    <DesktopHeader class="header" />
+    <div class="slot">
+      <slot />
+    </div>
+    <DesktopFooter class="footer" />
   </div>
 </template>
+
+<style scoped>
+.layout {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  min-height: 50px;
+}
+.footer {
+  min-height: 50px;
+}
+.slot {
+  flex: 1;
+}
+</style>
