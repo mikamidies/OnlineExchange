@@ -48,7 +48,7 @@ function backToRegions() {
       <div class="region" style="position: relative">
         <button class="region_btn" type="button" @click="toggleDropdown">
           <Icon icon="mdi:map-marker-outline" />
-          <p>Выберите регион</p>
+          <p>Choose region:</p>
         </button>
 
         <div v-if="showDropdown" id="region-dropdown" class="dropdown">
@@ -65,8 +65,8 @@ function backToRegions() {
           </template>
           <template v-else>
             <div @click="backToRegions" class="dropdown-header">
-              <Icon icon="material-symbols-light:chevron-left-rounded" /> Назад
-              к регионам
+              <Icon icon="material-symbols-light:chevron-left-rounded" />
+              Back to regions
             </div>
             <div
               v-for="city in currentCities"
