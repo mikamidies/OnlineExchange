@@ -10,7 +10,7 @@ const selectedFruits = ref([]);
 </script>
 
 <template>
-  <div class="component">
+  <div class="section">
     <div class="filterGrid">
       <div class="filterItem">
         <p class="filterPar">Category</p>
@@ -78,11 +78,11 @@ const selectedFruits = ref([]);
   grid-template-columns: repeat(5, 1fr);
   gap: 16px;
   border-bottom: 1px solid var(--light-green-2);
-  padding-bottom: 32px;
+  padding-bottom: 24px;
 }
 .filterTwice {
   display: grid;
-  grid-template-columns: 110px 110px;
+  grid-template-columns: repeat(2, 1fr);
   gap: 8px;
 }
 .filterPar {
