@@ -9,6 +9,10 @@
   --main-font: "Geomanist", sans-serif;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
   height: 100%;

@@ -29,5 +29,6 @@ import HomePopular from "~/components/HomePage/HomePopular.vue";
 <style scoped>
 .body {
   background: white;
+  border-radius: 8px 8px 0 0;
 }
 </style>

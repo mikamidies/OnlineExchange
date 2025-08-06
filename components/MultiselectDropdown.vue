@@ -3,6 +3,7 @@
     <div class="select-box" @click="toggleDropdown">
       <span v-if="selected.length">{{ selected.join(", ") }}</span>
       <span v-else class="placeholder">{{ placeholder }}</span>
+      <Icon icon="mdi:chevron-down" />
     </div>
 
     <div v-if="open" class="dropdown">
@@ -59,40 +60,44 @@ watch(selected, () => {
 .multi-select-dropdown {
   position: relative;
   width: 100%;
-  max-width: 300px;
   font-family: sans-serif;
+  cursor: pointer;
 }
-
 .select-box {
-  border: 1px solid #ccc;
-  padding: 8px;
+  padding: 14px;
   border-radius: 4px;
   background: #fff;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--main-font);
+  font-size: 16px;
 }
-
-.placeholder {
-  color: #aaa;
+.select-box svg {
+  width: 24px;
+  height: 24px;
 }
-
 .dropdown {
   position: absolute;
   top: 100%;
   left: 0;
-  right: 0;
+  width: 100%;
   background: white;
-  border: 1px solid #ccc;
-  margin-top: 2px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 10;
-  max-height: 200px;
-  overflow-y: auto;
-  padding: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
-
 .option {
-  display: block;
-  margin-bottom: 6px;
+  padding: 14px;
   cursor: pointer;
+  color: var(--grey);
+  border-bottom: 1px solid var(--light-grey);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-family: var(--main-font);
+}
+.placeholder {
+  color: var(--light-green-2);
 }
 </style>

@@ -91,10 +91,12 @@ function backToRegions() {
   background: var(--light-grey);
   padding: 32px;
   position: relative;
+  border-radius: 8px 8px 0 0;
 }
 .search form {
   display: grid;
   grid-template-columns: 60% 28% 12%;
+  border-radius: 8px;
 }
 .search .input {
   display: flex;
@@ -102,6 +104,7 @@ function backToRegions() {
   background: white;
   padding-left: 30px;
   border-right: 1px solid var(--light-grey);
+  border-radius: 8px 0 0 8px;
 }
 .search input {
   padding: 20px 30px 20px 12px;
@@ -123,6 +126,7 @@ function backToRegions() {
   justify-content: center;
   gap: 12px;
   font-weight: 600;
+  border-radius: 0 8px 8px 0;
 }
 .region {
   display: flex;

@@ -6,6 +6,7 @@
       @focus="open = true"
       @keydown.enter.prevent="selectTyped"
       :placeholder="placeholder"
+      :name="name"
     />
 
     <ul v-if="open && filteredOptions.length" class="dropdown">
@@ -77,35 +78,33 @@ onBeforeUnmount(() => {
 <style scoped>
 .input-select {
   position: relative;
-  width: 100%;
-  max-width: 300px;
 }
-
 .input-select input {
+  padding: 18px;
   width: 100%;
-  padding: 8px;
-  border: 1px solid #bbb;
+  height: 52px;
   border-radius: 4px;
+  width: 100%;
 }
-
+.input-select input::placeholder {
+  color: var(--light-green-2);
+}
 .dropdown {
   position: absolute;
-  top: 100%;
+  top: 70%;
   left: 0;
   right: 0;
   background: white;
-  border: 1px solid #ddd;
   border-top: none;
-  max-height: 200px;
   overflow-y: auto;
   z-index: 10;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
-
 .dropdown li {
-  padding: 8px;
+  padding: 14px;
   cursor: pointer;
+  border-bottom: 1px solid var(--light-grey);
 }
-
 .dropdown li:hover {
   background-color: #f0f0f0;
 }
