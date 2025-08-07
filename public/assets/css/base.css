@@ -5,6 +5,7 @@
   --light-green: #cbf7ee;
   --light-green-2: #7f9799;
   --border: #eceeef;
+  --light-blue: #ceddff;
 
   --main-font: "Geomanist", sans-serif;
 }
@@ -118,4 +119,8 @@ body {
 
 .container.small {
   max-width: 820px;
+}
+ul {
+  padding: 0;
+  margin: 0;
 }

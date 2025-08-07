@@ -4,6 +4,7 @@ import HomeSearch from "~/components/HomePage/HomeSearch.vue";
 import ListFilter from "~/components/ListPage/ListFilter.vue";
 import SimpleDropdown from "~/components/SimpleDropdown.vue";
 import ListList from "~/components/ListPage/ListList.vue";
+import BaseBanner from "~/components/BaseBanner.vue";
 </script>
 
 <template>
@@ -70,6 +71,76 @@ import ListList from "~/components/ListPage/ListList.vue";
             <NuxtLink to="/"> Mobile phones <span>155</span> </NuxtLink>
           </div>
           <ListList />
+          <BaseBanner />
+          <div class="searchOptions">
+            <div class="card">
+              <div class="img">
+                <img src="/public/assets/img/search.svg" alt="" />
+              </div>
+              <div class="l">
+                <h4>Popular options:</h4>
+                <ul>
+                  <li>
+                    <NuxtLink to="/">Iphone 13 pro</NuxtLink>
+                  </li>
+                  <ul>
+                    <NuxtLink to="/">Samsung A15</NuxtLink>
+                  </ul>
+                  <ul>
+                    <NuxtLink to="/">Iphone</NuxtLink>
+                  </ul>
+                  <ul>
+                    <NuxtLink to="/">Iphone 11</NuxtLink>
+                  </ul>
+                  <ul>
+                    <NuxtLink to="/">Samsung Galaxy</NuxtLink>
+                  </ul>
+                  <ul>
+                    <NuxtLink to="/">Samsung Galaxy Z Fold</NuxtLink>
+                  </ul>
+                </ul>
+              </div>
+            </div>
+            <div class="card">
+              <div class="img">
+                <img src="/public/assets/img/search.svg" alt="" />
+              </div>
+              <div class="l">
+                <h4>Trending options:</h4>
+                <ul>
+                  <li>
+                    <NuxtLink to="/">Iphone 13 pro</NuxtLink>
+                  </li>
+                  <ul>
+                    <NuxtLink to="/">Samsung A15</NuxtLink>
+                  </ul>
+                  <ul>
+                    <NuxtLink to="/">Iphone</NuxtLink>
+                  </ul>
+                  <ul>
+                    <NuxtLink to="/">Iphone 11</NuxtLink>
+                  </ul>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="about">
+            <p>
+              OLX.uz — широкий выбор бу телефонов, а также последних моделей от
+              популярных брендов.
+            </p>
+            <p>
+              На нашем сервисе люди со всего Узбекистана продают и покупают
+              телефоны, поэтому только на OLX вы найдете широкий ассортимент
+              телефонов на любой вкус — с нами у вас есть возможность купить
+              недорогие телефоны по лучшей цене в интернете. Вы также можете
+              продать собственное устройство и прилично заработать, вместо того,
+              чтобы оставить ваш старый телефон просто пылиться на полке.
+            </p>
+            <p>
+              Большой выбор и отличная стоимость телефона — только на OLX.uz!
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -101,6 +172,7 @@ import ListList from "~/components/ListPage/ListList.vue";
 .title {
   text-align: start;
   margin-bottom: 16px;
+  font-size: 24px;
 }
 .header {
   display: flex;
@@ -174,5 +246,42 @@ import ListList from "~/components/ListPage/ListList.vue";
 }
 .fastCategories span {
   font-weight: 600;
+}
+.searchOptions {
+  padding-top: 16px;
+}
+.searchOptions .card {
+  background: var(--light-blue);
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  padding: 10px 12px;
+  gap: 16px;
+}
+.searchOptions .l {
+  display: flex;
+  flex-direction: column;
+}
+.searchOptions h4 {
+  margin-bottom: 8px;
+}
+.searchOptions a {
+  display: flex;
+  text-decoration: underline;
+}
+.searchOptions ul {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.about {
+  font-size: 12px;
+  line-height: normal;
+  padding: 16px 0 48px 0;
+}
+.about p {
+  display: flex;
+  margin-bottom: 16px;
 }
 </style>
