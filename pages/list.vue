@@ -5,6 +5,25 @@ import ListFilter from "~/components/ListPage/ListFilter.vue";
 import SimpleDropdown from "~/components/SimpleDropdown.vue";
 import ListList from "~/components/ListPage/ListList.vue";
 import BaseBanner from "~/components/BaseBanner.vue";
+
+import { ref } from "vue";
+const current = ref(1);
+
+const categories = [
+  {
+    question: "Question 1",
+    answer:
+      "Answer, Answer, Answer, Answer, Answer, Answer, Answer, Answer, Answer",
+  },
+  {
+    question: "Question 2",
+    answer: "Answer, Answer, Answer, Answer, Answer, Answer, Answer, Answer",
+  },
+  {
+    question: "Question 3",
+    answer: "Answer, Answer, Answer, Answer, Answer, Answer",
+  },
+];
 </script>
 
 <template>
@@ -71,6 +90,8 @@ import BaseBanner from "~/components/BaseBanner.vue";
             <NuxtLink to="/"> Mobile phones <span>155</span> </NuxtLink>
           </div>
           <ListList />
+          <a-pagination v-model:current="current" :total="100" />
+
           <BaseBanner />
           <div class="searchOptions">
             <div class="card">
@@ -124,6 +145,17 @@ import BaseBanner from "~/components/BaseBanner.vue";
               </div>
             </div>
           </div>
+          <div class="accordionCategories">
+            <a-collapse v-model:activeKey="activeKey">
+              <a-collapse-panel
+                v-for="(mainCat, index) in categories"
+                :key="index"
+                :header="mainCat.question"
+              >
+                <p>{{ mainCat.answer }}</p>
+              </a-collapse-panel>
+            </a-collapse>
+          </div>
           <div class="about">
             <p>
               OLX.uz — широкий выбор бу телефонов, а также последних моделей от
@@ -148,140 +180,5 @@ import BaseBanner from "~/components/BaseBanner.vue";
 </template>
 
 <style scoped>
-.body {
-  background: var(--light-grey);
-  border-radius: 8px 8px 0 0;
-}
-.pad {
-  padding: 0 32px;
-}
-.like {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 24px;
-}
-.like button {
-  border: 2px solid var(--main-color);
-  border-radius: 4px;
-  padding: 12px 24px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 600;
-}
-.title {
-  text-align: start;
-  margin-bottom: 16px;
-  font-size: 24px;
-}
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 24px;
-}
-.filter {
-  margin-bottom: 24px;
-}
-.breadcrumbs {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 12px;
-}
-.prev,
-.stick {
-  color: var(--light-green-2);
-}
-.right {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  font-size: 14px;
-}
-.sort {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 16px;
-}
-.view {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-.view svg {
-  width: 32px;
-  height: 32px;
-  color: var(--light-green-2);
-}
-.view .active svg {
-  color: var(--main-color);
-}
-.currency {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-.currency button {
-  color: var(--light-green-2);
-}
-.currency button.active {
-  color: var(--main-color);
-  font-weight: 600;
-}
-.seoTitle {
-  line-height: 14px;
-  font-size: 12px;
-  font-weight: 400;
-  margin-bottom: 16px;
-  letter-spacing: 1px;
-}
-.fastCategories {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  font-size: 14px;
-  padding-bottom: 16px;
-}
-.fastCategories span {
-  font-weight: 600;
-}
-.searchOptions {
-  padding-top: 16px;
-}
-.searchOptions .card {
-  background: var(--light-blue);
-  display: flex;
-  align-items: center;
-  margin-bottom: 16px;
-  border-radius: 4px;
-  padding: 10px 12px;
-  gap: 16px;
-}
-.searchOptions .l {
-  display: flex;
-  flex-direction: column;
-}
-.searchOptions h4 {
-  margin-bottom: 8px;
-}
-.searchOptions a {
-  display: flex;
-  text-decoration: underline;
-}
-.searchOptions ul {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-.about {
-  font-size: 12px;
-  line-height: normal;
-  padding: 16px 0 48px 0;
-}
-.about p {
-  display: flex;
-  margin-bottom: 16px;
-}
+@import url(/public/assets/css/list.css);
 </style>
