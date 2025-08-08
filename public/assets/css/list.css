@@ -168,6 +168,9 @@
   border: 0;
   background: transparent;
 }
+:deep(.ant-collapse-item) {
+  border-bottom: 0;
+}
 :deep(.ant-collapse-header) {
   flex-direction: row-reverse;
   border: 0;

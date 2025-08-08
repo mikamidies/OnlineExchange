@@ -8,27 +8,29 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="item">
-    <div class="img">
-      <img :src="product.img" alt="" />
-    </div>
-    <div class="content">
-      <div class="top">
-        <div>
-          <p class="name">{{ product.name }}</p>
-          <p class="price">{{ product.price }}</p>
-        </div>
+  <NuxtLink to="/product">
+    <div class="item">
+      <div class="img">
+        <img :src="product.img" alt="" />
+      </div>
+      <div class="content">
+        <div class="top">
+          <div>
+            <p class="name">{{ product.name }}</p>
+            <p class="price">{{ product.price }}</p>
+          </div>
 
-        <button class="like">
-          <Icon icon="mdi:cards-heart-outline" />
-        </button>
-      </div>
-      <div>
-        <p class="address">Tashkent, Uzbekistan</p>
-        <p class="date">10.02.2000</p>
+          <button class="like">
+            <Icon icon="mdi:cards-heart-outline" />
+          </button>
+        </div>
+        <div>
+          <p class="address">Tashkent, Uzbekistan</p>
+          <p class="date">10.02.2000</p>
+        </div>
       </div>
     </div>
-  </div>
+  </NuxtLink>
 </template>
 
 <style scoped>

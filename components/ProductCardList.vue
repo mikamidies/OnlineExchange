@@ -8,34 +8,36 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="item">
-    <div class="img">
-      <img :src="product.img" alt="" />
-    </div>
-    <div class="content">
-      <div class="top">
-        <div class="topTop">
-          <p class="name">{{ product.name }}</p>
-          <p class="price">{{ product.price }}</p>
+  <NuxtLink to="/product">
+    <div class="item">
+      <div class="img">
+        <img :src="product.img" alt="" />
+      </div>
+      <div class="content">
+        <div class="top">
+          <div class="topTop">
+            <p class="name">{{ product.name }}</p>
+            <p class="price">{{ product.price }}</p>
+          </div>
+
+          <div class="status">
+            <p>New</p>
+          </div>
         </div>
 
-        <div class="status">
-          <p>New</p>
+        <div class="bottom">
+          <div class="info">
+            <p class="address">Tashkent, Uzbekistan</p>
+            <p class="date">10.02.2000</p>
+          </div>
+
+          <button class="like">
+            <Icon icon="mdi:cards-heart-outline" />
+          </button>
         </div>
       </div>
-
-      <div class="bottom">
-        <div class="info">
-          <p class="address">Tashkent, Uzbekistan</p>
-          <p class="date">10.02.2000</p>
-        </div>
-
-        <button class="like">
-          <Icon icon="mdi:cards-heart-outline" />
-        </button>
-      </div>
     </div>
-  </div>
+  </NuxtLink>
 </template>
 
 <style scoped>
@@ -45,9 +47,10 @@ const props = defineProps({
   display: grid;
   grid-template-columns: 216px 1fr;
   background: white;
+  min-height: 144px;
 }
 .img {
-  height: 128px;
+  height: 144px;
   width: 100%;
   overflow: hidden;
 }
@@ -58,7 +61,6 @@ const props = defineProps({
 }
 .content {
   padding: 16px;
-  height: 120px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

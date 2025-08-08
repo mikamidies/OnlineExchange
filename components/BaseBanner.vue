@@ -1,7 +1,8 @@
 <template>
   <div class="section">
     <a href="#">
-      <img src="/public/assets/img/banner.png" alt="" />
+      <div class="tag">Advertisement</div>
+      <img src="/public/assets/img/advert.jpg" alt="" />
     </a>
   </div>
 </template>
@@ -10,8 +11,24 @@
 .section {
   width: 100%;
   height: 266px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  position: relative;
+}
+.section a {
   overflow: hidden;
   border-radius: 4px;
+}
+.tag {
+  position: absolute;
+  top: -20px;
+  left: 16px;
+  padding: 2px 4px;
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0.6;
+  background: var(--border);
+  border-radius: 2px;
 }
 a {
   display: flex;
