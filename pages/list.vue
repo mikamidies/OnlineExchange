@@ -5,6 +5,7 @@ import ListFilter from "~/components/ListPage/ListFilter.vue";
 import SimpleDropdown from "~/components/SimpleDropdown.vue";
 import ListList from "~/components/ListPage/ListList.vue";
 import BaseBanner from "~/components/BaseBanner.vue";
+import BreadCrumbs from "~/components/BreadCrumbs.vue";
 
 import { ref } from "vue";
 const current = ref(1);
@@ -45,23 +46,7 @@ const categories = [
           </div>
           <h1 class="seoTitle">Electronics</h1>
           <div class="header">
-            <ol class="breadcrumbs">
-              <li>
-                <NuxtLink class="prev" to="/">Main</NuxtLink>
-              </li>
-              <li>
-                <div class="stick">/</div>
-              </li>
-              <li>
-                <NuxtLink class="prev" to="/">Electronics</NuxtLink>
-              </li>
-              <li>
-                <div class="stick">/</div>
-              </li>
-              <li>
-                <p>Phones</p>
-              </li>
-            </ol>
+            <BreadCrumbs />
 
             <div class="right">
               <div class="sort">
