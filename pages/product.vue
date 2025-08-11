@@ -51,7 +51,7 @@ import SimilarPosts from "~/components/ProductPage/SimilarPosts.vue";
           </div>
         </div>
       </div>
-      <AuthorsOthers />
+      <AuthorsOthers class="others" />
       <SimilarPosts />
     </div>
   </div>
@@ -65,5 +65,50 @@ import SimilarPosts from "~/components/ProductPage/SimilarPosts.vue";
 .innerSearch {
   padding: 0 0 32px 0;
   background: transparent;
+}
+.crumbs {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 0;
+}
+.back {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.back svg {
+  width: 32px;
+  height: 32px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  gap: 24px;
+  min-width: 0;
+}
+.left {
+  min-width: 0;
+}
+.image,
+.description,
+.contact,
+.price,
+.location,
+.about {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+:deep(.par) {
+  font-weight: 700;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 16px;
 }
 </style>

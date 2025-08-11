@@ -60,14 +60,59 @@ const products = [
 </script>
 
 <template>
-  <ClientOnly>
-    <swiper-container ref="containerRef">
-      <swiper-slide v-for="item in products" :key="item.id">
-        <ProductCard :product="item" />
-      </swiper-slide>
-    </swiper-container>
-  </ClientOnly>
-
-  <button @click="swiper.prev()">Prev</button>
-  <button @click="swiper.next()">Next</button>
+  <div class="section">
+    <div class="header">
+      <h4 class="title">Authors other posts</h4>
+      <div class="buttons">
+        <button @click="swiper.prev()">
+          <Icon icon="mdi:chevron-left"></Icon>
+        </button>
+        <button @click="swiper.next()">
+          <Icon icon="mdi:chevron-right"></Icon>
+        </button>
+      </div>
+    </div>
+    <ClientOnly>
+      <swiper-container
+        ref="containerRef"
+        :slides-per-view="5"
+        :space-between="16"
+        :loop="true"
+      >
+        <swiper-slide v-for="item in products" :key="item.id">
+          <ProductCard :product="item" />
+        </swiper-slide>
+      </swiper-container>
+    </ClientOnly>
+  </div>
 </template>
+
+<style scoped>
+.section {
+  padding: 32px 0;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 0 16px 0;
+}
+.title {
+  font-weight: 700;
+  text-decoration: none;
+  line-height: 26px;
+  padding: 0px;
+  margin: 0px 0 16px 0;
+  font-size: 24px;
+  text-align: left;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.buttons svg {
+  width: 28px;
+  height: 28px;
+}
+</style>

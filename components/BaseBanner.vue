@@ -11,13 +11,13 @@
 .section {
   width: 100%;
   height: 266px;
-  border-radius: 4px;
+  border-radius: 8px;
   border: 1px solid var(--border);
   position: relative;
 }
 .section a {
   overflow: hidden;
-  border-radius: 4px;
+  border-radius: 8px;
 }
 .tag {
   position: absolute;

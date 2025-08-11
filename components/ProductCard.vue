@@ -34,6 +34,9 @@ const props = defineProps({
 </template>
 
 <style scoped>
+a {
+  width: 100%;
+}
 .item {
   border-radius: 4px;
   overflow: hidden;
@@ -51,7 +54,7 @@ const props = defineProps({
 .content {
   padding: 16px;
   background: white;
-  height: 120px;
+  height: 144px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -59,6 +62,7 @@ const props = defineProps({
 .name {
   font-size: 14px;
   line-height: 18px;
+  margin-bottom: 8px;
 }
 .top {
   display: grid;
